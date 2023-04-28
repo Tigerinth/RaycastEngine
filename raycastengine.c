@@ -5,7 +5,7 @@
 #define PI 3.1415926535
 #define P2 PI/2
 #define P3 3*PI/2
-#define DR 0.0174533 //one degree in radians
+#define DR 0.0174533 //Radyanda 1 derece
 
 float px,py,pdx,pdy,pa;
 
@@ -55,7 +55,7 @@ void drawMap2D(){
 }
 float dist(float ax,float ay,float bx,float by, float ang)
 {
-return ( sqrt((bx-ax)*(bx-ax)+ (by-ay)*(by-ay)) );	//pythagorean teoremi
+return ( sqrt((bx-ax)*(bx-ax)+ (by-ay)*(by-ay)) );	//pisagor teoremi
 }
 void drawRays2D()
 {
@@ -113,7 +113,7 @@ void display()
  drawPlayer();
  glutSwapBuffers();
 }
-
+//kontroller
 void buttons(unsigned char key,int x, int y){
 	if(key=='a') { pa-=0.1; if(pa<0){ pa+=2*PI;} pdx=cos(pa)*5; pdy=sin(pa)*5;}
 	if(key=='d') { pa+=0.1; if(pa>2*PI){ pa-=2*PI;} pdx=cos(pa)*5; pdy=sin(pa)*5;}
